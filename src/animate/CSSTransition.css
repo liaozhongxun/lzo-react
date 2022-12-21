@@ -1,0 +1,37 @@
+/* 第一次入场动画 */
+.lzo-appear{
+    opacity: 0;
+}
+.lzo-appear-active{
+    opacity: 1;
+    transition: opacity 2s ease;
+}
+
+/* 进入动画 */
+.lzo-enter {
+    opacity: 0;
+}
+
+.lzo-enter-active {
+    opacity: 1;
+    transition: opacity 2s ease;
+}
+
+.lzo-enter-done { /* 进入完成 */
+    color: #f00;
+}
+
+
+/* 离开动画 */
+.lzo-exit {
+    opacity: 1;
+}
+
+.lzo-exit-active {
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+
+.lzo-exit-done {
+    color:#000
+}
