@@ -25,7 +25,7 @@ export class app extends PureComponent {
                 <CSSTransition
                     in={showTitle}    
                     classNames='lzo'
-                    timeout={2000}
+                    timeout={1000}
                     unmountOnExit={true}
                     appear
                     
