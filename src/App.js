@@ -2,7 +2,6 @@ import React from 'react'
 import Headers from "./components/Headers"
 import BrotherOne from './components/BrotherOne';
 
-import ReducerModule from "./reducermodule/index"
 
 // 创建一个Context, 组件隔代传值
 // const AppContext = React.createContext;
@@ -47,8 +46,6 @@ class App extends React.Component {
                 <div>{this.state.count}</div>
                 <div>=======================受控组件==================</div>
                 <BrotherOne></BrotherOne>
-                <div>=======================redux数据=================</div>
-                <ReducerModule></ReducerModule>
             </div>
         );
     }
