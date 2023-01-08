@@ -5,6 +5,14 @@ import ReactDOM from 'react-dom/client';
 // import App from './animate/CSSTransition';
 import App from './cssmodule/cssmodule';
 
+// redux
+import { Provider } from "react-redux"
+import store from "./store"
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+root.render(
+    <Provider store={store}>
+        <App />
+    </Provider>
+);
 
