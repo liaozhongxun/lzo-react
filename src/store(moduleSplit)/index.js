@@ -10,6 +10,11 @@ const reducer = combineReducers({
     home: homeReducer
 })
 
+// combineReducers 实现原理
+// const reducer = (state = {}, action) => ({
+//     about: aboutReducer(state.about, action),
+//     home: homeReducer(state.home, action),
+// })
 
 // redux-devtools , 生产环境把  window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({trace: true}) 干掉就看不到了
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({ trace: true }) || compose;
