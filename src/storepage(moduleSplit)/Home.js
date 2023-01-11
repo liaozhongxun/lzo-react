@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import { changeHomeNameAction } from "../store(moduleSplit)/home/actionCreators"
+import { changeHomeNameAction, getAsyncDataAction } from "../store(moduleSplit)/home/actionCreators"
 import { connect } from "react-redux";  // react-redux 2、 引入 connect 
 
 export class index extends PureComponent {
@@ -7,11 +7,17 @@ export class index extends PureComponent {
         this.props.changeName(name);
     }
 
+    // 异步获取数据
+    componentDidMount(){
+        this.props.getAsyncData();
+    }
+
     render() {
-        const { homename } = this.props;
+        const { homename,banners } = this.props;
         return (
             <div>
                 <div>homename: {homename}</div>
+                <div>{banners.map((item,index)=> <span key={index}>title: {item.title}</span>)}</div>
                 <button onClick={e => this.view_change_name('123')}>改变</button>
             </div>
         )
@@ -22,12 +28,16 @@ export class index extends PureComponent {
 // 设置需要映射的状态，组件中通过props获取
 const mapStateToProps = (state) => ({
     homename: state.home.homename,
+    banners: state.home.banners
 })
 // 映射action 到 props
 const mapDispatchToProps = (dispatch) => ({
     changeName(name) {
         dispatch(changeHomeNameAction(name));
     },
+    getAsyncData(){
+        dispatch(getAsyncDataAction())
+    }
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(index);  // react-redux 3、 使用高阶函数 connect
