@@ -1,5 +1,6 @@
 import { createStore, applyMiddleware, compose, combineReducers } from "redux";
 import thunk from "redux-thunk";
+import log from "./middleware/log"
 
 import aboutReducer from "./about"
 import homeReducer from "./home";
@@ -23,5 +24,12 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({ trace: tr
 // const store = createStore(reducer);
 // const store = createStore(reducer,applyMiddleware(thunk)); // 通过 applyMiddleware 应用中间件 增强redux，可以很多
 const store = createStore(reducer, composeEnhancers(applyMiddleware(thunk))); // 使用 redux-devtools
+
+
+
+// 中间件实现log
+log(store)
+
+// 实现 thunk 
 
 export default store;

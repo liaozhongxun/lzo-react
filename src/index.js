@@ -11,12 +11,12 @@ import { Provider } from "react-redux" // 将react和redux结合在一起
 // import store from './store(default)'
 
 // redux 模块拆分
-// import App from './storepage(moduleSplit)'
-// import store from './store(moduleSplit)'
+import App from './storepage(moduleSplit)'
+import store from './store(moduleSplit)'
 
 // redux toolkit 的使用
-import App from './storepage(toolkit)'
-import store from './store(toolkit)'
+// import App from './storepage(toolkit)'
+// import store from './store(toolkit)'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
