@@ -1,11 +1,14 @@
 import React, { PureComponent } from 'react'
+import { withRouter } from '../hoc'
+
 
 export class HomeChild1 extends PureComponent {
-  render() {
-    return (
-      <div>HomeChild1</div>
-    )
-  }
+    render() {
+        const { router } = this.props;
+        return (
+            <div>HomeChild1 得到动态路由参数 {router.params.id}</div>
+        )
+    }
 }
 
-export default HomeChild1
+export default withRouter(HomeChild1)

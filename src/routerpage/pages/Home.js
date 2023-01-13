@@ -11,8 +11,8 @@ export class Home extends PureComponent {
         return (
             <div>
                 <div className='home-header'>
-                    <Link to="/home/c1">子路由1</Link>
-                    <Link to="/home/c2">子路由2</Link>
+                    <Link to="/home/c1/123">子路由1</Link>
+                    <Link to="/home/c2?a=1&b=2">子路由2</Link>
                     <button onClick={e => this.navigateTo("/about")}>js跳转</button>
                 </div>
                 <div className='home-centert'>
