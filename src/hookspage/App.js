@@ -1,9 +1,13 @@
 import React, { PureComponent } from 'react'
-import CountClass from './useState-demo/CountClass'
-import CountHook from './useState-demo/CountHook'
+import CountClass from './1.useState-demo/CountClass'
+import CountHook from './1.useState-demo/CountHook'
 
-import SetTitleClass from './useEffect-demo/1.SetTitleClass'
-import SetTitleHook from './useEffect-demo/2.SetTitleHook'
+import SetTitleClass from './2.useEffect-demo/1.SetTitleClass'
+import SetTitleHook from './2.useEffect-demo/2.SetTitleHook'
+
+import UseContex from './3.useContext-demo'
+
+import UseCallbac from './4.useCallback-demo'
 
 export class App extends PureComponent {
   render() {
@@ -18,6 +22,11 @@ export class App extends PureComponent {
         <div className='title'>Hook useEffect 的使用 <hr /></div>
         <SetTitleClass></SetTitleClass>
         <SetTitleHook></SetTitleHook>
+        <br />
+        <div className='title'>Hook UseContext 的使用 <hr /></div>
+        <UseContex></UseContex>
+        <div className='title'>Hook useCallback 的使用 <hr /></div>
+        <UseCallbac></UseCallbac>
       </div>
     )
   }

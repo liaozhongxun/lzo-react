@@ -15,6 +15,17 @@ const SetTitleHook = memo(() => {
         }
     });
 
+    // 参数二 ，第二次渲染是，只有在数组中的状态发生改变，才会再次执行 回调(空数组说明，永远不会再次执行了)
+    useEffect(()=>{
+        console.log('只执行一次，发生网络请求')
+        return () => { 
+            console.log('只有组件被卸载才会执行')
+        }
+    },[])
+    useEffect(()=>{
+        console.log('counter 发生变化就会执行')
+    },[counter])
+
     return (
         <div>
             <div>connt:{counter}</div>

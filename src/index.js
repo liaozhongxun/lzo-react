@@ -2,6 +2,7 @@ import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import { Provider } from "react-redux" // 将react和redux结合在一起
 import { HashRouter } from 'react-router-dom'; //router1、 使用配置 HashRouter ，6.x
+import { UserContext, ThemeContext } from "./hookspage/3.useContext-demo/context"
 
 // import App from './App';
 // import App from './animate/CSSTransition';
@@ -13,6 +14,7 @@ import { HashRouter } from 'react-router-dom'; //router1、 使用配置 HashRou
 
 // hooks 使用
 import App from './hookspage/App'
+// hook useContext
 
 
 // redux 默认使用
@@ -33,9 +35,14 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <HashRouter>
         <Suspense fallback={<h3>Loading...</h3>}>
-            <Provider store={store}>  {/*react-redux 1、 给整个应用提供store，组件中就不用导入了*/}
-                <App />
-            </Provider>
+            {/*注入 context*/}
+            <UserContext.Provider value={{ name: "UserContextName", level: 99 }}>
+                <ThemeContext.Provider value={{ color: "red", size: 30 }}>
+                    <Provider store={store}>  {/*react-redux 1、 给整个应用提供store，组件中就不用导入了*/}
+                        <App />
+                    </Provider>
+                </ThemeContext.Provider>
+            </UserContext.Provider>
         </Suspense>
     </HashRouter>
 );
