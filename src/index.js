@@ -9,7 +9,11 @@ import { HashRouter } from 'react-router-dom'; //router1、 使用配置 HashRou
 
 // router 路由配置
 // import App from './routerpage'
-import App from './routerpage/index(未提取路由到配置文件)'
+// import App from './routerpage/index(未提取路由到配置文件)'
+
+// hooks 使用
+import App from './hookspage/App'
+
 
 // redux 默认使用
 // import App from './storepage(default)'
