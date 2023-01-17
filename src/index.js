@@ -3,17 +3,22 @@ import ReactDOM from 'react-dom/client';
 import { Provider } from "react-redux" // 将react和redux结合在一起
 import { HashRouter } from 'react-router-dom'; //router1、 使用配置 HashRouter ，6.x
 import { UserContext, ThemeContext } from "./hookspage/3.useContext-demo/context"
+import "normalize.css";
 
 // import App from './App';
+
+// 动画
 // import App from './animate/CSSTransition';
-// import App from './cssmodule/cssmodule';
+
+// 样式
+import App from './cssmodule';
 
 // router 路由配置
 // import App from './routerpage'
 // import App from './routerpage/index(未提取路由到配置文件)'
 
 // hooks 使用
-import App from './hookspage/App'
+// import App from './hookspage/App'
 // hook useContext
 
 
@@ -28,6 +33,11 @@ import store from './store(moduleSplit)'
 // redux toolkit 的使用
 // import App from './storepage(toolkit)'
 // import store from './store(toolkit)'
+
+
+// 案例
+// 大屏案例
+// import App from './case/LargeScreen/LargeScreen'
 
 
 
