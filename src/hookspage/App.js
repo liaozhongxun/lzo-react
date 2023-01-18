@@ -9,6 +9,10 @@ import UseContex from './3.useContext-demo'
 
 import UseCallbac from './4.useCallback-demo'
 
+import UseMemoHook from './5.useMemo-demo/UseMemoHook'
+
+import UseRefHookDom from './6.useRef-demo/UseRefHook-dom'
+
 export class App extends PureComponent {
   render() {
     return (
@@ -27,6 +31,10 @@ export class App extends PureComponent {
         <UseContex></UseContex>
         <div className='title'>Hook useCallback 的使用 <hr /></div>
         <UseCallbac></UseCallbac>
+        <div className='title'>Hook useMemo 的使用 <hr /></div>
+        <UseMemoHook></UseMemoHook>
+        <div className='title'>Hook useRef 的使用 <hr /></div>
+        <UseRefHookDom></UseRefHookDom>
       </div>
     )
   }
