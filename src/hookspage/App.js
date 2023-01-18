@@ -12,6 +12,7 @@ import UseCallbac from './4.useCallback-demo'
 import UseMemoHook from './5.useMemo-demo/UseMemoHook'
 
 import UseRefHookDom from './6.useRef-demo/UseRefHook-dom'
+import UseRefHook from './6.useRef-demo/UseRefHook-闭包陷阱'
 
 export class App extends PureComponent {
   render() {
@@ -35,6 +36,7 @@ export class App extends PureComponent {
         <UseMemoHook></UseMemoHook>
         <div className='title'>Hook useRef 的使用 <hr /></div>
         <UseRefHookDom></UseRefHookDom>
+        <UseRefHook></UseRefHook>
       </div>
     )
   }

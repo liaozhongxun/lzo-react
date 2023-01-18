@@ -1,4 +1,4 @@
-import React, { memo, useRef } from "react";
+import React, { memo, useRef, useEffect } from "react";
 import { useCallback } from "react";
 import { useState } from "react";
 
@@ -18,6 +18,7 @@ const App = memo(() => {
         setCount(countRef.current + 1);
     }, []);
 
+    
     return (
         <div>
             <h2>Hello World: {count}</h2>
