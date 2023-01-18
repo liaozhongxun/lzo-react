@@ -18,7 +18,7 @@ import "normalize.css";
 // import App from './routerpage/index(未提取路由到配置文件)'
 
 // hooks 使用
-import App from './hookspage/App'
+// import App from './hookspage/App'
 // hook useContext
 
 
@@ -28,11 +28,11 @@ import App from './hookspage/App'
 
 // redux 模块拆分
 // import App from './storepage(moduleSplit)'
-import store from './store(moduleSplit)'
+// import store from './store(moduleSplit)'
 
 // redux toolkit 的使用
-// import App from './storepage(toolkit)'
-// import store from './store(toolkit)'
+import App from './storepage(toolkit)'
+import store from './store(toolkit)'
 
 
 // 案例

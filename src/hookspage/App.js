@@ -14,6 +14,8 @@ import UseMemoHook from './5.useMemo-demo/UseMemoHook'
 import UseRefHookDom from './6.useRef-demo/UseRefHook-dom'
 import UseRefHook from './6.useRef-demo/UseRefHook-闭包陷阱'
 
+import MyHooks from './7.自定义hooks/MyHooks'
+import MyHooks2 from './7.自定义hooks/MyHooks2'
 export class App extends PureComponent {
   render() {
     return (
@@ -37,6 +39,9 @@ export class App extends PureComponent {
         <div className='title'>Hook useRef 的使用 <hr /></div>
         <UseRefHookDom></UseRefHookDom>
         <UseRefHook></UseRefHook>
+        <div className='title'>自定义hook <hr /></div>
+        <MyHooks></MyHooks>
+        <MyHooks2></MyHooks2>
       </div>
     )
   }
