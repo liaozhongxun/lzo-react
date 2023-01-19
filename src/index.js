@@ -7,7 +7,7 @@ import "normalize.css";
 
 // 组件
 // import App from './components/App';
-import App from './components-hoc/App';
+// import App from './components-hoc/App';
 
 // jsx
 // import App from './jsx/App';
@@ -23,7 +23,7 @@ import App from './components-hoc/App';
 // import App from './routerpage/index(未提取路由到配置文件)'
 
 // hooks 使用
-// import App from './hookspage/App'
+import App from './hookspage/App'
 // hook useContext
 
 
