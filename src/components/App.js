@@ -1,6 +1,6 @@
 import React from 'react'
-import Headers from "./components/Headers"
-import BrotherOne from './components/BrotherOne';
+import Headers from "./Headers"
+import BrotherOne from './BrotherOne';
 
 
 // 创建一个Context, 组件隔代传值

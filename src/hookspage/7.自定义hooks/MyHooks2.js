@@ -1,11 +1,16 @@
-import React, { memo } from 'react'
-import { useLogLife, useScrollPosition } from './hooks'
+import React, { memo, useRef } from 'react'
+import { useLogLife, useScrollElement } from './hooks'
 
 const MyHooks2 = memo(() => {
     useLogLife();
-    const [x, y] = useScrollPosition()
+    const scrollDomRef = useRef()
+    // const [x, y] = useScrollPosition()
+    const [x, y] = useScrollElement(scrollDomRef)
+    
     return (
-        <div style={{ width: "500px", height: "2000px" }}>{x}-{y}</div>
+        <div className='scroll' ref={scrollDomRef} style={{ width: "120%", height: "250px",overflow:'auto',position:"relative" }}>
+            <div className='scrollInner' style={{width:"150%"}}>{[...Array(1000).keys()].map((item)=> <div key={item}>{x}-{y}</div>)}</div>
+        </div>
     )
 })
 

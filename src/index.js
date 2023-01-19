@@ -5,7 +5,12 @@ import { HashRouter } from 'react-router-dom'; //router1、 使用配置 HashRou
 import { UserContext, ThemeContext } from "./hookspage/3.useContext-demo/context"
 import "normalize.css";
 
-// import App from './App';
+// 组件
+// import App from './components/App';
+import App from './components-hoc/App';
+
+// jsx
+// import App from './jsx/App';
 
 // 动画
 // import App from './animate/CSSTransition';
@@ -31,7 +36,7 @@ import "normalize.css";
 // import store from './store(moduleSplit)'
 
 // redux toolkit 的使用
-import App from './storepage(toolkit)'
+// import App from './storepage(toolkit)'
 import store from './store(toolkit)'
 
 
@@ -49,7 +54,7 @@ root.render(
             <UserContext.Provider value={{ name: "UserContextName", level: 99 }}>
                 <ThemeContext.Provider value={{ color: "red", size: 30 }}>
                     <Provider store={store}>  {/*react-redux 1、 给整个应用提供store，组件中就不用导入了*/}
-                        <App />
+                        <App value={'1234'}/>
                     </Provider>
                 </ThemeContext.Provider>
             </UserContext.Provider>
